@@ -34,10 +34,13 @@ const NotificationToast: React.FunctionComponent<NotificationToastProps> = ({
     let sound: HTMLAudioElement | null = null;
     if (showToast) {
       sound = new Audio(notificationSound);
-      sound.play();
+      var isPlaying = sound.currentTime > 0 && !sound.paused && !sound.ended
+      if (!isPlaying) {
+        sound.play();
+      }
     }
     return () => {
-      if (sound) {
+      if (sound && isPlaying) {
         sound.pause();
         sound.currentTime = 0;
       }
