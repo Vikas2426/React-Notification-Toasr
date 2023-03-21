@@ -1,0 +1,78 @@
+h1,
+p {
+  font-family: Lato;
+}
+.toast-container {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 9999;
+}
+
+.toast {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #fff;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.25);
+  animation: 0.8s slide-up ease-in-out;
+  position: relative;
+  width: 250px;
+}
+
+.toast.success {
+  background-color: #4caf50;
+}
+
+.toast.warning {
+  background-color: #ffc107;
+}
+
+.toast.error {
+  background-color: #f44336;
+}
+
+.toast svg {
+  margin-right: 8px;
+  font-size: 24px;
+}
+
+.toast .message {
+  margin-left: 8px;
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+.toast .close-btn {
+  position: absolute;
+  top: 1px;
+  right: -10px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.582);
+  /* outline: none; */
+}
+
+.toast .close-btn svg {
+  font-size: 15px;
+  font-weight: 100;
+}
+.toast .close-btn:hover {
+  color: #fff;
+  /* color: rgb(61, 61, 61); */
+}
