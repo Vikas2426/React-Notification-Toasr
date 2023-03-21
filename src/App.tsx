@@ -1,13 +1,13 @@
 import * as React from 'react';
-import './style.css';
+import './App.css';
 import NotificationToast from './NotificationToast';
 
-const bar = [];
 export default function App() {
   return (
     <div style={{ position: 'relative', overflow: 'hidden', height: `100vh` }}>
-      <h1>Hello StackBlitz!</h1>
-      <p>Start editing to see some magic happen :)</p>
+<h1>
+Hello, welcome to my Notification Toast repository.
+</h1>
 
       <div className="toast-container">
         <NotificationToast
@@ -16,7 +16,7 @@ export default function App() {
         />
         <NotificationToast message="Oops, something went wrong!" type="error" />
         <NotificationToast
-          message="Please fill in all required fields.bvcvbv ffghfg ttfht ertdrdg ertrtr"
+          message="Please fill in all required fields."
           type="warning"
         />
       </div>
